@@ -72,6 +72,21 @@
     }
   }
 
+  @keyframes pulse-glow-mobile {
+    0%, 100% {
+      filter: brightness(1.2) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.4));
+    }
+    25% {
+      filter: brightness(1.4) drop-shadow(0 0 30px rgba(255, 255, 255, 1)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 70px rgba(255, 255, 255, 0.6));
+    }
+    50% {
+      filter: brightness(1.6) drop-shadow(0 0 40px rgba(255, 255, 255, 1)) drop-shadow(0 0 60px rgba(255, 255, 255, 1)) drop-shadow(0 0 80px rgba(255, 255, 255, 0.8));
+    }
+    75% {
+      filter: brightness(1.4) drop-shadow(0 0 30px rgba(255, 255, 255, 1)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 70px rgba(255, 255, 255, 0.6));
+    }
+  }
+
   @keyframes flowing-bg {
     0%, 100% {
       transform: translateX(0) translateY(0) scale(1);
@@ -105,6 +120,16 @@
 
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow-mobile {
+    animation: pulse-glow-mobile 2s ease-in-out infinite;
+  }
+
+  @media (max-width: 768px) {
+    .animate-pulse-glow {
+      animation: pulse-glow-mobile 2s ease-in-out infinite;
+    }
   }
 
   .animate-flowing-bg {
