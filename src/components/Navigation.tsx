@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,21 +36,19 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md transition-all duration-300 w-full"
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Name - shown when scrolled */}
-            {isScrolled && (
-              <div className="animate-fade-in">
-                <span className="text-xl font-light tracking-wider text-white">
-                  SAMRAE
-                </span>
-              </div>
-            )}
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between w-full">
+            {/* Site Name - always visible on the left */}
+            <div className="animate-fade-in flex-shrink-0 ml-4">
+              <span className="text-lg sm:text-xl font-light tracking-wider text-white">
+                SAMRAE
+              </span>
+            </div>
             
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8 ml-auto">
+            {/* Desktop Navigation - right side, hidden on mobile */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link, index) => (
                 <a
                   key={link.href}
@@ -64,10 +61,10 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - right side, only visible on mobile */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden relative z-50 p-2 transition-all duration-300 hover:scale-110"
+              className="md:hidden relative z-50 p-2 transition-all duration-300 hover:scale-110 flex-shrink-0 mr-4"
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 flex items-center justify-center">
@@ -99,7 +96,7 @@ export default function Navigation() {
 
         {/* Mobile Menu Dropdown */}
         <div
-          className={`md:hidden fixed inset-x-0 top-0 bg-black/98 backdrop-blur-lg transition-all duration-500 ease-in-out ${
+          className={`md:hidden fixed inset-x-0 top-0 bg-black/98 backdrop-blur-lg transition-all duration-500 ease-in-out w-full ${
             isMobileMenuOpen
               ? 'translate-y-0 opacity-100 visible'
               : '-translate-y-full opacity-0 invisible'
