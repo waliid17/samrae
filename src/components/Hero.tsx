@@ -9,7 +9,7 @@ export default function Hero() {
           <img
             src="/logo.png"
             alt="SAMRAE"
-            className="w-80 h-60 xs:w-96 xs:h-72 sm:w-[28rem] sm:h-80 md:w-96 md:h-72 lg:w-[28rem] lg:h-80 xl:w-[32rem] xl:h-96 2xl:w-[36rem] 2xl:h-[20rem] mx-auto object-contain animate-slide-up animate-pulse-glow"
+            className="w-96 h-72 xs:w-[28rem] xs:h-80 sm:w-[32rem] sm:h-96 md:w-96 md:h-72 lg:w-[28rem] lg:h-80 xl:w-[32rem] xl:h-96 2xl:w-[36rem] 2xl:h-[20rem] mx-auto object-contain animate-slide-up animate-pulse-glow"
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards', willChange: 'filter, transform' }}
             loading="eager"
           />
