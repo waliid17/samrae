@@ -1,24 +1,35 @@
 import { ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+  const [logoError, setLogoError] = useState(false);
+
+  useEffect(() => {
+    // Force logo reload on mobile
+    const img = new Image();
+    img.onload = () => setLogoError(false);
+    img.onerror = () => setLogoError(true);
+    img.src = '/logo.png';
+  }, []);
+
   return (
     <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <div className="mb-8 animate-fade-in">
-          <img
-            src="/logo.png"
-            alt="SAMRAE"
-            className="w-[20rem] h-32 sm:w-[24rem] sm:h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56 xl:w-[36rem] xl:h-64 2xl:w-[40rem] 2xl:h-72 mx-auto object-contain animate-slide-up animate-pulse-glow"
-            style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
-            onError={(e) => {
-              e.currentTarget.style.display = 'none';
-              e.currentTarget.nextElementSibling.style.display = 'block';
-            }}
-          />
-          <div className="hidden w-[20rem] h-32 sm:w-[24rem] sm:h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56 xl:w-[36rem] xl:h-64 2xl:w-[40rem] 2xl:h-72 mx-auto flex items-center justify-center">
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider text-white animate-pulse-glow">SAMRAE</span>
-          </div>
+          {!logoError ? (
+            <img
+              src="/logo.png"
+              alt="SAMRAE"
+              className="w-[20rem] h-32 sm:w-[24rem] sm:h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56 xl:w-[36rem] xl:h-64 2xl:w-[40rem] 2xl:h-72 mx-auto object-contain animate-slide-up animate-pulse-glow"
+              style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
+              onError={() => setLogoError(true)}
+            />
+          ) : (
+            <div className="w-[20rem] h-32 sm:w-[24rem] sm:h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56 xl:w-[36rem] xl:h-64 2xl:w-[40rem] 2xl:h-72 mx-auto flex items-center justify-center">
+              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider text-white animate-pulse-glow">SAMRAE</span>
+            </div>
+          )}
         </div>
 
 
