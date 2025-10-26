@@ -6,8 +6,8 @@ export default function Services() {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -100px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -36,11 +36,11 @@ export default function Services() {
           if (entry.isIntersecting && !visibleCards.includes(index)) {
             setTimeout(() => {
               setVisibleCards((prev) => [...prev, index]);
-            }, index * 100);
+            }, index * 50);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
 
     cardRefs.current.forEach((ref) => {

@@ -6,8 +6,8 @@ export default function Palace() {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -100px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -43,7 +43,7 @@ export default function Palace() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
     );
 
     if (infoRef.current) observer.observe(infoRef.current);
