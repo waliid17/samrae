@@ -21,13 +21,13 @@ export default function Hero() {
             <img
               src="/logo.png"
               alt="SAMRAE"
-              className="w-[20rem] h-32 sm:w-[24rem] sm:h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56 xl:w-[36rem] xl:h-64 2xl:w-[40rem] 2xl:h-72 mx-auto object-contain animate-slide-up animate-pulse-glow"
+              className="w-[32rem] h-64 sm:w-[36rem] sm:h-72 md:w-[40rem] md:h-80 lg:w-[44rem] lg:h-88 xl:w-[48rem] xl:h-96 2xl:w-[52rem] 2xl:h-[28rem] mx-auto object-contain animate-slide-up animate-pulse-glow"
               style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
               onError={() => setLogoError(true)}
             />
           ) : (
-            <div className="w-[20rem] h-32 sm:w-[24rem] sm:h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56 xl:w-[36rem] xl:h-64 2xl:w-[40rem] 2xl:h-72 mx-auto flex items-center justify-center">
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider text-white animate-pulse-glow">SAMRAE</span>
+            <div className="w-[32rem] h-64 sm:w-[36rem] sm:h-72 md:w-[40rem] md:h-80 lg:w-[44rem] lg:h-88 xl:w-[48rem] xl:h-96 2xl:w-[52rem] 2xl:h-[28rem] mx-auto flex items-center justify-center">
+              <span className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light tracking-wider text-white animate-pulse-glow">SAMRAE</span>
             </div>
           )}
         </div>
