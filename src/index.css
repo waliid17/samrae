@@ -20,20 +20,20 @@
 
 @layer utilities {
   @keyframes fade-in {
-    from {
+    0% {
       opacity: 0;
     }
-    to {
+    100% {
       opacity: 1;
     }
   }
 
   @keyframes slide-up {
-    from {
+    0% {
       opacity: 0;
       transform: translateY(30px);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateY(0);
     }
@@ -96,11 +96,11 @@
   }
 
   .animate-fade-in {
-    animation: fade-in 1s ease-out;
+    animation: fade-in 1s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slide-up 0.8s ease-out;
+    animation: slide-up 0.8s ease-out forwards;
   }
 
   .animate-shine {
@@ -120,13 +120,13 @@
     }
     
     .animate-slide-up {
-      animation: slide-up 0.8s ease-out;
-      -webkit-animation: slide-up 0.8s ease-out;
+      animation: slide-up 0.8s ease-out forwards;
+      -webkit-animation: slide-up 0.8s ease-out forwards;
     }
     
     .animate-fade-in {
-      animation: fade-in 1s ease-out;
-      -webkit-animation: fade-in 1s ease-out;
+      animation: fade-in 1s ease-out forwards;
+      -webkit-animation: fade-in 1s ease-out forwards;
     }
     
     @keyframes pulse-glow {

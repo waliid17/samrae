@@ -16,7 +16,7 @@ export default function Hero() {
     <section className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-8">
           {!logoError ? (
             <img
               src="/logo.png"
