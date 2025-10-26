@@ -11,7 +11,14 @@ export default function Hero() {
             alt="SAMRAE"
             className="w-[32rem] h-64 sm:w-[36rem] sm:h-72 md:w-[40rem] md:h-80 lg:w-[44rem] lg:h-88 xl:w-[48rem] xl:h-96 2xl:w-[52rem] 2xl:h-[28rem] mx-auto object-contain animate-slide-up animate-pulse-glow"
             style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling.style.display = 'block';
+            }}
           />
+          <div className="hidden w-[32rem] h-64 sm:w-[36rem] sm:h-72 md:w-[40rem] md:h-80 lg:w-[44rem] lg:h-88 xl:w-[48rem] xl:h-96 2xl:w-[52rem] 2xl:h-[28rem] mx-auto flex items-center justify-center">
+            <span className="text-6xl md:text-8xl font-light tracking-wider text-white animate-pulse-glow">SAMRAE</span>
+          </div>
         </div>
 
 
