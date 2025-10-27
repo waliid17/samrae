@@ -63,7 +63,7 @@ export default function About() {
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">La Construction de la Marque</h3>
                 <p className="text-lg text-neutral-300 leading-relaxed">
-                  Portée par mon expérience et ma vision, j'ai créé @SAMRAE.DRESS. Cette marque incarne mon engagement 
+                  Portée par mon expérience et ma vision, j'ai créé SAMRAE DRESS. Cette marque incarne mon engagement 
                   à créer des pièces sophistiquées et intemporelles qui célèbrent la féminité. Chaque collection est méticuleusement 
                   conçue pour incarner l'élégance, la confiance et le style authentique.
                 </p>
@@ -71,11 +71,12 @@ export default function About() {
 
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">2025 - SAMRAE PALACE</h3>
-                <p className="text-lg text-neutral-300 leading-relaxed">
-                  En 2025, j'ai ouvert SAMRAE PALACE, une boutique physique où @SAMRAE.DRESS prend vie. 
-                  Cet espace exclusif offre une expérience de shopping luxueuse, présentant nos collections signature 
-                  et des services de styling personnalisés dans un cadre élégant et intimiste.
-                </p>
+               <p className="text-lg text-neutral-300 leading-relaxed">
+  En 2025, j'ai ouvert <strong>SAMRAE PALACE</strong>, une boutique exclusive incarnant l'élégance et le raffinement de nos créations. 
+  Cet espace offre une expérience de shopping luxueuse, présentant nos collections signature 
+  et des services de styling personnalisés dans un cadre élégant et intimiste.
+</p>
+
               </div>
               
               <div>
