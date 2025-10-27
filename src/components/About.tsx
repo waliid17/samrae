@@ -63,7 +63,7 @@ export default function About() {
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">La Construction de la Marque</h3>
                 <p className="text-lg text-neutral-300 leading-relaxed">
-                  Portée par mon expérience et ma vision, j'ai créé SAMRAE DRESS. Cette marque incarne mon engagement 
+                  Portée par mon expérience et ma vision, j'ai créé <strong>SAMRAE DRESS</strong>. Cette marque incarne mon engagement 
                   à créer des pièces sophistiquées et intemporelles qui célèbrent la féminité. Chaque collection est méticuleusement 
                   conçue pour incarner l'élégance, la confiance et le style authentique.
                 </p>
