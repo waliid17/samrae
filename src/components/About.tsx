@@ -75,11 +75,16 @@ export default function About() {
 
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">2025 - SAMRAE PALACE</h3>
-               <p className="text-lg text-neutral-300 leading-relaxed">
-  En 2025, j'ai ouvert <strong>SAMRAE PALACE</strong>, une boutique exclusive incarnant l'élégance et le raffinement de nos créations. 
+              <p className="text-lg text-neutral-300 leading-relaxed">
+  En 2025, j'ai ouvert 
+  <strong className="font-extrabold text-white tracking-wide">
+    {' '}SAMRAE PALACE
+  </strong>, 
+  une boutique exclusive incarnant l'élégance et le raffinement de nos créations. 
   Cet espace offre une expérience de shopping luxueuse, présentant nos collections signature 
   et des services de styling personnalisés dans un cadre élégant et intimiste.
 </p>
+
 
               </div>
               
