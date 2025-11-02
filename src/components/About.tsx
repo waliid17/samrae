@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 export default function About() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
-  const rightRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -19,15 +18,6 @@ export default function About() {
             entry.target.classList.add('animate-fade-in-up');
           } else if (entry.target === leftRef.current) {
             entry.target.classList.add('animate-slide-in-left');
-          } else if (entry.target === rightRef.current) {
-            entry.target.classList.add('animate-smooth-image-reveal');
-            // Animate the decorative border with a slight delay
-            const borderElement = entry.target.querySelector('.absolute.-bottom-6');
-            if (borderElement) {
-              setTimeout(() => {
-                borderElement.classList.add('opacity-100');
-              }, 800);
-            }
           }
         }
       });
@@ -35,7 +25,6 @@ export default function About() {
 
     if (titleRef.current) observer.observe(titleRef.current);
     if (leftRef.current) observer.observe(leftRef.current);
-    if (rightRef.current) observer.observe(rightRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -55,7 +44,7 @@ export default function About() {
           <div className="w-32 h-0.5 bg-white mx-auto mb-8"></div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-8 lg:space-y-12">
             <div ref={leftRef} className="opacity-0 space-y-12">
               <div>
@@ -103,19 +92,6 @@ export default function About() {
                   notre mission est de permettre aux femmes d'exprimer leur style authentique à travers un design exceptionnel. 
                   Chaque création est pensée pour vous faire sentir confiante, élégante et unique.
                 </p>
-              </div>
-            </div>
-          </div>
-          
-          <div ref={rightRef} className="opacity-0 order-first lg:order-last flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-2xl relative group mx-auto">
-                <img 
-                  src="/me.png" 
-                  alt="About me" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
               </div>
             </div>
           </div>
