@@ -107,17 +107,15 @@ export default function About() {
             </div>
           </div>
           
-          <div ref={rightRef} className="opacity-0 order-first lg:order-last">
+          <div ref={rightRef} className="opacity-0 order-first lg:order-last flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl relative group">
+              <div className="w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shadow-2xl relative group mx-auto">
                 <img 
                   src="/me.png" 
                   alt="About me" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
-                <div className="absolute -bottom-6 -right-6 lg:-bottom-8 lg:-right-8 w-48 h-48 lg:w-64 lg:h-64 border-2 border-white/20 rounded-lg -z-10 opacity-0 transition-opacity duration-1000 delay-300"></div>
               </div>
             </div>
           </div>
