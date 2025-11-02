@@ -23,7 +23,7 @@ export default function Hero() {
 
         <p className="text-base sm:text-lg md:text-xl font-light text-neutral-300 opacity-0 animate-slide-up"
            style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
-          Créatrice de @SAMRAE.DRESS
+          Créatrice de SAMRAE DRESS
         </p>
 
         <div className="mt-16 opacity-0 animate-fade-in"
