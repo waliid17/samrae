@@ -20,7 +20,14 @@ export default function About() {
           } else if (entry.target === leftRef.current) {
             entry.target.classList.add('animate-slide-in-left');
           } else if (entry.target === rightRef.current) {
-            entry.target.classList.add('animate-slide-in-right');
+            entry.target.classList.add('animate-smooth-image-reveal');
+            // Animate the decorative border with a slight delay
+            const borderElement = entry.target.querySelector('.absolute.-bottom-6');
+            if (borderElement) {
+              setTimeout(() => {
+                borderElement.classList.add('opacity-100');
+              }, 800);
+            }
           }
         }
       });
@@ -48,8 +55,8 @@ export default function About() {
           <div className="w-32 h-0.5 bg-white mx-auto mb-8"></div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <div className="space-y-12">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="space-y-8 lg:space-y-12">
             <div ref={leftRef} className="opacity-0 space-y-12">
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">2018 - Le Début</h3>
@@ -62,20 +69,31 @@ export default function About() {
               
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">La Construction de la Marque</h3>
-                <p className="text-lg text-neutral-300 leading-relaxed">
-                  Portée par mon expérience et ma vision, j'ai créé @SAMRAE.DRESS. Cette marque incarne mon engagement 
-                  à créer des pièces sophistiquées et intemporelles qui célèbrent la féminité. Chaque collection est méticuleusement 
-                  conçue pour incarner l'élégance, la confiance et le style authentique.
-                </p>
+               <p className="text-lg text-neutral-300 leading-relaxed">
+  Portée par mon expérience et ma vision, j'ai créé 
+  <strong className="font-extrabold text-white tracking-wide">
+    {' '}SAMRAE DRESS
+  </strong>. 
+  Cette marque incarne mon engagement à créer des pièces sophistiquées et intemporelles qui célèbrent la féminité. 
+  Chaque collection est méticuleusement conçue pour incarner l'élégance, la confiance et le style authentique.
+</p>
+
               </div>
 
               <div>
                 <h3 className="text-3xl font-light text-white mb-6">2025 - SAMRAE PALACE</h3>
-                <p className="text-lg text-neutral-300 leading-relaxed">
-                  En 2025, j'ai ouvert SAMRAE PALACE, une boutique physique où @SAMRAE.DRESS prend vie. 
-                  Cet espace exclusif offre une expérience de shopping luxueuse, présentant nos collections signature 
-                  et des services de styling personnalisés dans un cadre élégant et intimiste.
-                </p>
+              <p className="text-lg text-neutral-300 leading-relaxed">
+  En 2025, j'ai ouvert 
+  <strong className="font-extrabold text-white tracking-wide">
+    {' '}SAMRAE PALACE
+  </strong>, 
+  une boutique exclusive incarnant l'élégance et le raffinement de nos créations. 
+  Cet espace offre une expérience de shopping luxueuse, présentant nos collections signature 
+  et des services de styling personnalisés dans un cadre élégant et intimiste.
+</p>
+
+
+
               </div>
               
               <div>
@@ -89,18 +107,18 @@ export default function About() {
             </div>
           </div>
           
-          <div ref={rightRef} className="opacity-0">
+          <div ref={rightRef} className="opacity-0 order-first lg:order-last">
             <div className="relative">
-              <div className="aspect-[4/5] bg-gradient-to-br from-neutral-800 via-neutral-700 to-neutral-900 rounded-lg overflow-hidden flex items-center justify-center shadow-2xl">
-                <div className="text-center text-white">
-                  <p className="text-7xl font-light mb-4">2025</p>
-                  <p className="text-4xl font-light mb-6">SAMRAE</p>
-                  <p className="text-5xl font-light mb-6">PALACE</p>
-                  <p className="text-base font-light tracking-[0.2em] mb-2">BOUTIQUE</p>
-                  <p className="text-xs font-light tracking-[0.2em]">@SAMRAE.DRESS</p>
-                </div>
+              <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-2xl relative group">
+                <img 
+                  src="/me.png" 
+                  alt="About me" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute -bottom-6 -right-6 lg:-bottom-8 lg:-right-8 w-48 h-48 lg:w-64 lg:h-64 border-2 border-white/20 rounded-lg -z-10 opacity-0 transition-opacity duration-1000 delay-300"></div>
               </div>
-              <div className="absolute -bottom-8 -right-8 w-64 h-64 border-2 border-white/20 rounded-lg -z-10"></div>
             </div>
           </div>
         </div>

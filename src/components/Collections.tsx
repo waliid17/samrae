@@ -90,15 +90,17 @@ export default function Collections() {
               }`}
             >
               {/* Video Container */}
-              <div className="relative w-full h-80 overflow-hidden">
+              <div className="relative w-full h-80 overflow-hidden group-hover:shadow-2xl group-hover:shadow-white/10 transition-all duration-500">
                 <video
                   key={collection.video}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ filter: 'brightness(0.6)' }}
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 hdr-video animate-hdr-pulse"
+                  style={{ 
+                    willChange: 'filter, transform'
+                  }}
                 >
                   <source src={collection.video} type="video/mp4" />
                   Your browser does not support the video tag.
